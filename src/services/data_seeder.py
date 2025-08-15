@@ -97,18 +97,21 @@ class DataSeeder:
         """Create Facebook accounts"""
         print("Seeding Facebook accounts...")
         
+        # NOTE: Using placeholder passwords for seeding. In a real application,
+        # this data should be handled securely and not stored in plaintext.
         accounts_data = [
-            {"email": "amy@amycomputers.com", "display_name": "Amy Computers - Main"},
-            {"email": "amy.sales@amycomputers.com", "display_name": "Amy Computers - Sales"},
-            {"email": "amy.support@amycomputers.com", "display_name": "Amy Computers - Support"},
-            {"email": "amy.marketplace@amycomputers.com", "display_name": "Amy Computers - Marketplace"},
-            {"email": "amy.business@amycomputers.com", "display_name": "Amy Computers - Business"},
-            {"email": "amy.backup@amycomputers.com", "display_name": "Amy Computers - Backup"}
+            {"email": "amy@amycomputers.com", "password": "AxiomChoi!2", "display_name": "Amy Computers - Main"},
+            {"email": "amy.sales@amycomputers.com", "password": "Str0ngP@ssw0rd!", "display_name": "Amy Computers - Sales"},
+            {"email": "amy.support@amycomputers.com", "password": "Str0ngP@ssw0rd!", "display_name": "Amy Computers - Support"},
+            {"email": "amy.marketplace@amycomputers.com", "password": "Str0ngP@ssw0rd!", "display_name": "Amy Computers - Marketplace"},
+            {"email": "amy.business@amycomputers.com", "password": "Str0ngP@ssw0rd!", "display_name": "Amy Computers - Business"},
+            {"email": "amy.backup@amycomputers.com", "password": "Str0ngP@ssw0rd!", "display_name": "Amy Computers - Backup"}
         ]
         
         for i, account_data in enumerate(accounts_data):
             account = FacebookAccount(
                 email=account_data["email"],
+                password=account_data["password"],
                 display_name=account_data["display_name"],
                 is_active=True,
                 is_locked=i == 5,  # Lock the last account for testing

@@ -9,6 +9,7 @@ class FacebookAccount(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
+    password = db.Column(db.String(255), nullable=False)  # Encrypt in a real-world app
     display_name = db.Column(db.String(255), nullable=False)
     is_active = db.Column(db.Boolean, default=True, nullable=False)
     is_locked = db.Column(db.Boolean, default=False, nullable=False)

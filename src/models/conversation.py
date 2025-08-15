@@ -1,8 +1,6 @@
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Numeric
 from datetime import datetime
-
-db = SQLAlchemy()
+from src.models.facebook_account import db
 
 class Conversation(db.Model):
     __tablename__ = 'conversations'
