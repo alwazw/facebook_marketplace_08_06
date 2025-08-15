@@ -12,7 +12,7 @@ typing_extensions==4.14.0
 Werkzeug==3.1.3
 
 # Additional dependencies for Facebook Marketplace Automation
-requests==2.31.0
+requests==2.32.4
 python-dateutil==2.8.2
 jsonschema==4.19.1
 python-dotenv==1.0.0
@@ -26,12 +26,12 @@ numpy==1.26.4
 pydantic==2.4.2
 pytest==7.4.2
 pytest-flask==1.3.0
-gunicorn==21.2.0
+gunicorn==23.0.0
 psutil==5.9.5
-cryptography==41.0.7
+cryptography==44.0.1
 
 # Development tools
 playwright==1.40.0
-black==23.9.1
+black==24.3.0
 flake8==6.1.0
 isort==5.12.0
