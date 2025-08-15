@@ -1,8 +1,6 @@
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import json
-
-db = SQLAlchemy()
+from src.models.facebook_account import db
 
 class Message(db.Model):
     __tablename__ = 'messages'
